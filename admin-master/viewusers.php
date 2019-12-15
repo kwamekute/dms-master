@@ -69,8 +69,9 @@ $username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_s']);
 </div>
 <div class="table-responsive">
   <?php
-                            $response = $user_info ->allusers();
-                      if($response['response']){
+
+  $response = $user_info ->allusers();
+  if($response['response']){
                       ?>
   <table id="data-table-basic" class="table table-striped">
   <thead>
