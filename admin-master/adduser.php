@@ -44,7 +44,7 @@ if (isset($_POST['add'])) {
     $role = preg_replace("#[^0-9]#","",$_POST['role']);
     $password =  md5($_POST['password']);
     $username = preg_replace("#[^0-9a-zA-z-., ]#","",$_POST['username']);
-    if (!empty($name) && !empty($role) && !empty($password) && !empty($username)) {
+    if (!empty($name) && $role !="" && !empty($password) && !empty($username)) {
     // send data
     $result = $user_info->adduser($username,$password,$name,$role,$main);
    if ($result['response']) {

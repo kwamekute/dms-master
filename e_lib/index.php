@@ -9,7 +9,7 @@ class Connection{
 		      define('HOST',"localhost");
 	          define('USER',"root");
 	          define('PASS',"");
-	          define('DB',"dms-master");
+	          define('DB',"dms_staging");
 	try{
 		$this ->link = new PDO('mysql:host='.HOST.';dbname='.DB,USER,PASS);
 		return $this ->link;
