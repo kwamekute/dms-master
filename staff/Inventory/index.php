@@ -1,11 +1,11 @@
 <?php
 ob_start();
 $link = $_SERVER['DOCUMENT_ROOT'];
-include '../e_lib/connect.php';
+include '../../../e_lib/connect.php';
 
-if(!isset($_COOKIE['_s']) && !isset($_COOKIE['_r'])){
-    header('location: ../login/login-register.php');
-}
+//if(!isset($_COOKIE['_s']) && !isset($_COOKIE['_r'])){
+   // header('location: ../login/login-register.php');
+//}
 $username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_s']);
 ?>
 
@@ -16,20 +16,20 @@ $username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_s']);
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Dashboard One | Notika - Notika Admin Template</title>
+<title>Inventory | <?php include('../title.php');?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<?php include 'css.php' ?>
+<?php include '../css.php' ?>
 </head>
 <body>
 <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-<?php include 'topnav.php' ?>
-<?php include 'mobilenav.php' ?>
-<?php include 'mainnav.php' ?>
+        <?php include '../topnav.php' ?>
+       
+        <?php include 'inventorynav.php' ?>
 
 <div class="sale-statistic-area">
   <div class="container">
@@ -39,23 +39,24 @@ $username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_s']);
 <?php
 if (isset($_POST['add'])) {
 // Now call set info
-    $main = preg_replace("#[^0-9]#","",$_POST['main']);
-    $name = preg_replace("#[^0-9a-zA-z-. ]#","",$_POST['fullname']);
-    $role = preg_replace("#[^0-9]#","",$_POST['role']);
-    $password =  md5($_POST['password']);
-    $username = preg_replace("#[^0-9a-zA-z-., ]#","",$_POST['username']);
-    if (!empty($name) && $role !="" && !empty($password) && !empty($username)) {
+    $name = preg_replace("#[^0-9a-zA-z-. ]#","",$_POST['name']);
+    $address = preg_replace("#[^0-9a-zA-z-.,/@ ]#","",$_POST['address']);
+    $motto = preg_replace("#[^0-9a-zA-z-., ]#","",$_POST['motto']);
+    $contact = preg_replace("#[^0-9]#","",$_POST['contact']);
+    $skin = preg_replace("#[^a-zA-Z]#","",$_POST['skin']);
+
+    if (!empty($name) && !empty($address) && !empty($motto) && !empty($contact)) {
     // send data
-    $result = $user_info->adduser($username,$password,$name,$role,$main);
-   if ($result['response']) {
-     ?>
-     <script>toastr.success("successfully added a User");</script>
-     <?php
-   }else{
-     ?>
-     <script>toastr.error("Ooops something happend");</script>
-     <?php
-   }
+    $result = $user_info->addcompany($name,$address,$contact,$skin,$motto);
+    if ($result['response']){
+      ?>
+      <script>toastr.success("successfully added a company");</script>
+      <?php
+    }else{
+      ?>
+      <script>toastr.error("Ooops something happend");</script>
+      <?php
+    }
   }
 }
 ?>
@@ -63,10 +64,8 @@ if (isset($_POST['add'])) {
     <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
       <div class="form-element-list mg-t-30">
           <div class="cmp-tb-hd">
-          <h2>Add User</h2>
+          <h2>Add Main Company</h2>
           </div>
-
-
 
           <div class="col-md-7">
               <div class="form-group ic-cmp-int">
@@ -74,7 +73,7 @@ if (isset($_POST['add'])) {
                 <i class="notika-icon notika-support"></i>
                 </div>
                 <div class="nk-int-st">
-                  <input type="text" class="form-control" name="username" placeholder="username">
+                  <input type="text" class="form-control" name="name" placeholder="Company Name">
                 </div>
               </div>
           </div>
@@ -85,7 +84,7 @@ if (isset($_POST['add'])) {
                 <i class="notika-icon notika-support"></i>
                 </div>
                 <div class="nk-int-st">
-                  <input type="password" class="form-control" name="password" placeholder="password">
+                  <input type="text" class="form-control" name="address" placeholder="Company Address">
                 </div>
               </div>
           </div>
@@ -96,47 +95,31 @@ if (isset($_POST['add'])) {
                 <i class="notika-icon notika-support"></i>
                 </div>
                 <div class="nk-int-st">
-                  <input type="text" class="form-control" name="fullname" placeholder="FUll Name">
+                  <input type="number" class="form-control" name="contact" placeholder="Company Contact">
                 </div>
               </div>
           </div>
+
           <div class="col-md-7">
               <div class="form-group ic-cmp-int float-lb floating-lb">
                 <div class="form-ic-cmp">
                 <i class="notika-icon notika-support"></i>
                 </div>
                 <div class="nk-int-st">
-                <select class="form-control" name="role">
-                  <option value=" ">Select Role</option>
-                  <option value="1">Admin</option>
-                  <option value="0">Staff</option>
-                </select>
+                  <input type="text" class="form-control" name="motto" placeholder="Motto">
                 </div>
               </div>
           </div>
+
           <div class="col-md-7">
               <div class="form-group ic-cmp-int float-lb floating-lb">
                 <div class="form-ic-cmp">
                 <i class="notika-icon notika-support"></i>
                 </div>
                 <div class="nk-int-st">
-                <select class="form-control" name="main">
-                  <option value="0">Select Main Company</option>
-                  <?php
-                    $response = $user_info ->getallcompanies();
-                    if ($response['response']) {
-
-                      for ($i=0; $i < count($response['data']); $i++) {
-                                $data = $response['data'][$i];
-                                $branch_id = $data['branch_id'];
-                                $branch_name = $data['branch_name'];
-                                ?>
-                                <option value="<?php echo $branch_id ?>"><?php echo $branch_name ?></option>
-                                <?php
-                           }
-                       }
-                  ?>
-
+                <select class="form-control" name="skin">
+                  <option value="0">Select Skin</option>
+                  <option value="red">Red</option>
                 </select>
                 </div>
               </div>
@@ -146,7 +129,7 @@ if (isset($_POST['add'])) {
               <div class="form-group ic-cmp-int float-lb floating-lb">
                 <div class="form-ic-cmp">
                 <button  type="submit" name="add" class="btn btn-success orange-icon-notika waves-effect">
-                 Add User
+                  <i class="notika-icon notika-checked"></i> Add Company
                 </button>
                 </div>
               </div>
@@ -163,8 +146,9 @@ if (isset($_POST['add'])) {
 
 
 
-<?php include 'footer.php'?>
-<?php include 'js.php'?>
 
+<?php include '../footer.php'?>
+
+<?php include '../js.php' ?>
 
 </html>
