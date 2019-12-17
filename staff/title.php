@@ -1,5 +1,8 @@
 <?php 
-	echo "Dealer Management System";
 
+
+
+	define('URLROOT','http://localhost/dms-master');
+	define('TITLE','Dealer Management System');
 
 ?>

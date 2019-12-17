@@ -10,7 +10,7 @@ include '../e_lib/connect.php';
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Login Register | Notika - Notika Admin Template</title>
+<title>Login | Dealer Manangement System</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
@@ -37,10 +37,16 @@ include '../e_lib/connect.php';
 
 <div class="login-content">
 
+
 <div class="nk-block toggled" id="l-login">
+<div class="">
+        <h1 style="">Dealer Management <br> System</h1>
+      </div>
+      <br>
   <div class="nk-form">
     <div class="alert alert-success" role="alert" id="process" style="display:none">Login successfully.... Redirecting you</div>
     <div id="results"></div>
+    <p class="login-box-msg">Enter Credentials To Login</p>
     <div class="input-group">
       <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
         <div class="nk-int-st">
@@ -57,9 +63,14 @@ include '../e_lib/connect.php';
     <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
   </div>-->
       <a href="javascript:void();" id="login_click" class="btn btn-login btn-success btn-float">
-        <i class="notika-icon notika-right-arrow right-arrow-ant"></i>
+        <i class="fa fa-arrow-circle-right"></i>
       </a>
+
+     
   </div>
+  
+       
+  
   <div class="nk-navigation nk-lg-ic">
         <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
   </div>
