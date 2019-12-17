@@ -1,10 +1,25 @@
+<?php
+ob_start();
+$link = $_SERVER['DOCUMENT_ROOT'];
+include '../e_lib/connect.php';
+
+if(!isset($_COOKIE['_u']) && !isset($_COOKIE['_l'])){
+    header('location: ../login/login-register.php');
+}
+$username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_u']);
+$branch_id = $user_info->getuser($username)["branch_id"];
+$branch_name = $user_info->getbch($branch_id)["branch_name"];
+$motto = $user_info->getbch($branch_id)["motto"];
+?>
+
 <div class="header-top-area">
 <div class="container">
 <div class="row">
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 <div class="logo-area">
 <a href="index.php"><img src="img/logo/logo.png" alt="" /></a>
-<h4 style="color: white;">Trust Hands Auto</h4>
+<h4 style="color: #fff;"><?php echo $branch_name ?></h4>
+
 </div>
 </div>
 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -20,7 +35,7 @@
 </div>
 </li>
  <li class="nav-item dropdown">
-<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
+<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-edit"><span style="font-size:14px">Reorder</span></i></span></a>
 <div role="menu" class="dropdown-menu message-dd animated zoomIn">
 <div class="hd-mg-tt">
 <h2>Messages</h2>

@@ -1,14 +1,3 @@
-<?php
-ob_start();
-$link = $_SERVER['DOCUMENT_ROOT'];
-include '../e_lib/connect.php';
-
-if(!isset($_COOKIE['_s']) && !isset($_COOKIE['_r'])){
-    header('location: ../login/login-register.php');
-}
-$username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_s']);
-?>
-
 <!doctype html>
 <html class="no-js" lang="">
 

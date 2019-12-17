@@ -4,7 +4,7 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="footer-copy-right">
 <p>Copyright © 2019
-<a href="#">Datafacers</a>. All rights reserved.</p>
+<a href="#">Datafacers</a>. All rights reserved. Developed By Bittech Corporation</p>
 </div>
 </div>
 </div>

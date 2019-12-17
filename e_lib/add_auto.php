@@ -169,6 +169,48 @@ class Add_companies extends User_login{
         return array("response"=>$response,"data"=>$data);
     }
 
+    public function getuser($username){
+      $response = false; $data = []; $branch_id='';$name='';$status='';
+      $select = "SELECT `username`,`name`,`status`,`role`,`branch_id` FROM `user` WHERE `username`='$username'";
+      $run = $this->link->prepare($select);
+      $run ->execute();
+      //print_r($run ->errorInfo());
+      if ($run->rowCount()) {
+       $response = true;
+       while ($info = $run->fetchObject()) {
+          $username = $info->username;
+          $name = $info->name;
+          $status = $info->status;
+          //$role = $info->role;
+          $branch_id = $info->branch_id;
+        ///  $data[] = array(,"role"=>$role);
+        }
+      }
+        return array("response"=>$response,"branch_id"=>$branch_id,"username"=>$username,"name"=>$name,"status"=>$status);
+    }
+
+    public function getbch($branch_id){
+      $response = false; $data = []; $branch_name='';$branch_address='';$branch_contact='';$skin='';$main_sub='';$motto='';
+      $select = "SELECT `branch_id`,`branch_name`,`branch_address`,`branch_contact`,`skin`,`main_sub`,`motto` FROM `branch` WHERE `branch_id`='$branch_id'";
+      $run = $this->link->prepare($select);
+      $run ->execute();
+      //print_r($run ->errorInfo());
+      if ($run->rowCount()) {
+       $response = true;
+       while ($info = $run->fetchObject()) {
+          $branch_id = $info->branch_id;
+          $branch_name = $info->branch_name;
+          $branch_address = $info->branch_address;
+          $branch_contact = $info->branch_contact;
+          $skin = $info->skin;
+          $main_sub = $info->main_sub;
+          $motto = $info->motto;
+        }
+      }
+        return array("response"=>$response,"branch_id"=>$branch_id,"branch_name"=>$branch_name,"branch_address"=>$branch_address
+      ,"branch_contact"=>$branch_contact,"skin"=>$skin,"main_sub"=>$main_sub,"motto"=>$motto);
+    }
+
   }
 ob_end_flush();
 ?>

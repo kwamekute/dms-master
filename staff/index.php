@@ -1,13 +1,3 @@
-<?php
-ob_start();
-$link = $_SERVER['DOCUMENT_ROOT'];
-include '../e_lib/connect.php';
-
-if(!isset($_COOKIE['_u']) && !isset($_COOKIE['_l'])){
-    header('location: ../login/login-register.php');
-}
-$username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_u']);
-?>
 
 <!doctype html>
 <html class="no-js" lang="">
@@ -28,7 +18,7 @@ $username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_u']);
         <![endif]-->
 
 <?php include 'topnav.php' ?>
-<?php //include 'mobilenav.php' ?>
+<?php include 'mobilenav.php' ?>
 <?php include 'mainnav.php' ?>
 
 <div class="notika-status-area">
@@ -42,7 +32,7 @@ $username = preg_replace("#[^0-9a-zA-Z-., ]#","",$_COOKIE['_u']);
         </div>
        <div><i class="fa fa-cart-plus" style="font-size:50px; color:#99ccff"></i></div>
       </div>
-      <a href="inventory/"> <button class="btn btn-warning btn-icon-notika waves-effect" style="border:none; border-radius:0px; background:#99ccff">Go <i class="notika-icon notika-right-arrow"></i></button></a>
+      <a href="inventory.php"> <button class="btn btn-warning btn-icon-notika waves-effect" style="border:none; border-radius:0px; background:#99ccff">Go <i class="notika-icon notika-right-arrow"></i></button></a>
     </div>
 
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
