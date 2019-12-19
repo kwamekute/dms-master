@@ -96,7 +96,7 @@
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -108,16 +108,16 @@
         <div class="form-group">
           <label class="control-label col-lg-3" for="price">Part No.</label>
           <div class="col-lg-9">
-            <input type="text" class="form-control" id="price" name="part_no" placeholder="Enter Part No." required>  
+            <input type="text" class="form-control" id="price" name="part_no" placeholder="Enter Part No." required>
           </div>
         </div>
-                
+
         <div class="form-group">
           <label class="control-label col-lg-3" for="name">Part Name</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" id="id" name="id" required>  
-            <input type="text" class="form-control" id="name" name="part_name" placeholder="Enter Part Name" required>  
+          <div class="col-lg-9"><input type="hidden" class="form-control" id="id" name="id" required>
+            <input type="text" class="form-control" id="name" name="part_name" placeholder="Enter Part Name" required>
           </div>
-        </div> 
+        </div>
         <div class="form-group">
               <label class="control-label col-lg-3" >Unit of Measurement</label>
               <div class="col-lg-9">
@@ -165,27 +165,27 @@
 
                 </select>
           </div>
-        </div> 
-        
+        </div>
+
         <div class="form-group">
           <label class="control-label col-lg-3" for="price">Retail Price(Exc)</label>
           <div class="col-lg-9">
-            <input type="text" class="form-control" id="price" name="part_price_retail" placeholder="Enter Part Unit Price" required>  
+            <input type="text" class="form-control" id="price" name="part_price_retail" placeholder="Enter Part Unit Price" required>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-lg-3" for="price">Retail Price(Inc)</label>
           <div class="col-lg-9">
-            <input type="text" class="form-control" id="price" name="part_price_exc" placeholder="" disabled >  
+            <input type="text" class="form-control" id="price" name="part_price_exc" placeholder="" disabled >
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-lg-3" for="price">Cost Price(Exc)</label>
           <div class="col-lg-9">
-            <input type="text" class="form-control" id="price" name="part_cost_price" placeholder="Enter Cost Price" required>  
+            <input type="text" class="form-control" id="price" name="part_cost_price" placeholder="Enter Cost Price" required>
           </div>
         </div>
-           
+
               <div class="form-group">
               <label class="control-label col-lg-3" >Category</label>
               <div class="col-lg-9">
@@ -234,7 +234,7 @@
               </div><!-- /.input group -->
               </div><!-- /.form group -->
 
-             
+
               <div class="form-group">
               <label class="control-label col-lg-3" >Manufacturer</label>
               <div class="col-lg-9">
@@ -284,13 +284,13 @@
               <div class="form-group">
           <label class="control-label col-lg-3" for="price">Initial Quantity</label>
           <div class="col-lg-9">
-            <input type="text" class="form-control" id="price" name="initial_qty" placeholder="Enter Initial Quantity" required>  
+            <input type="text" class="form-control" id="price" name="initial_qty" placeholder="Enter Initial Quantity" required>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-lg-3" for="price">Reorder</label>
           <div class="col-lg-9">
-            <input type="number" class="form-control" id="price" name="reorder" placeholder="Enter Reorder Point"  required>  
+            <input type="number" class="form-control" id="price" name="reorder" placeholder="Enter Reorder Point"  required>
           </div>
         </div>
 
@@ -302,7 +302,7 @@
         </div>
         </form>
       </div>
-      
+
     </div>
   </div>
  <!-- End of Modal -->

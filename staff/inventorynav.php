@@ -7,7 +7,7 @@
 <li class="active"><a href="index.php"><i class="notika-icon notika-house"></i> Home</a>
 =======
 <li class="active"><a data-toggle="tab" href="inventory.php"><i class="fa fa-camera"></i> Inventory Maintenance</a>
->>>>>>> 5dfd134e13fbd39a4d20c9784f36711655c74086
+>>>>>>> 2505b94aa8fadaac4dfe684221f026dbe0dcd173
 </li>
 <li><a data-toggle="tab" href="#"><i class="notika-icon notika-mail"></i> History</a>
 </li>
@@ -21,7 +21,6 @@
 </li>
 </ul>
 <div class="tab-content custom-menu-content">
-<<<<<<< HEAD
 
   <div id="maintenance" class="tab-pane notika-tab-menu-bg animated flipInX">
     <ul class="notika-main-menu-dropdown">
@@ -33,50 +32,6 @@
     </ul>
   </div>
 
-=======
-<div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href=""></a>
-</li>
-</ul>
-</div>
-<div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="addmain.php">Add Main Company</a>
-</li>
-<li><a href="addbranch.php">Add Company Branches</a>
-</li>
-</ul>
-</div>
-<div id="Interface" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="adduser.php">Add User</a>
- </li>
- <li><a href="viewusers.php">View User</a>
-  </li>
-</ul>
-</div>
-<div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="flot-charts.html">Flot Charts</a>
-</li>
-<li><a href="bar-charts.html">Bar Charts</a>
-</li>
-<li><a href="line-charts.html">Line Charts</a>
-</li>
-<li><a href="area-charts.html">Area Charts</a>
-</li>
-</ul>
-</div>
-<div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="normal-table.html">Normal Table</a>
-</li>
-<li><a href="data-table.html">Data Table</a>
-</li>
-</ul>
-</div>
->>>>>>> 5dfd134e13fbd39a4d20c9784f36711655c74086
 <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
   <ul class="notika-main-menu-dropdown">
     <li><a href="form-elements.html">Inventory</a></li>

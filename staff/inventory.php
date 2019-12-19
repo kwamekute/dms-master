@@ -22,7 +22,7 @@
 <?php include 'inventorynav.php' ?>
 
 <div class="content container">
-    
+
     <div class="row">
     	<div class="col-sm-12">
             <div class="panel with-nav-tabs panel-info">
@@ -60,12 +60,17 @@
                                 </ul>
                             </li>
                         </ul>
-                        
+
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
+<<<<<<< HEAD
                         <div class="tab-pane fade in active" id="tab1default">   <?php include 'viewparts.php'?>  </div>
                         <div class="tab-pane fade" id="tab2default"><?php include 'addparts.php'?></div>
+=======
+                        <div class="tab-pane fade in active" id="parts">   <?php include 'viewparts.php'?>  </div>
+                       <!-- <div class="tab-pane fade" id="tab2default"><?php include 'addparts.php'?></div> -->
+>>>>>>> 2505b94aa8fadaac4dfe684221f026dbe0dcd173
                         <div class="tab-pane fade" id="tab3default">Default 3</div>
                         <div class="tab-pane fade" id="tab4default">Default 4</div>
                         <div class="tab-pane fade" id="tab5default">Default 5</div>
@@ -77,7 +82,7 @@
                 </div>
             </div>
         </div>
-      
+
 	</div>
 </div>
 
