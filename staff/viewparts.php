@@ -166,7 +166,7 @@
                 </select>
           </div>
         </div> 
-        
+        <?php ?>
         <div class="form-group">
           <label class="control-label col-lg-3" for="price">Retail Price(Exc)</label>
           <div class="col-lg-9">
@@ -185,6 +185,7 @@
             <input type="text" class="form-control" id="price" name="part_cost_price" placeholder="Enter Cost Price" required>  
           </div>
         </div>
+      
            
               <div class="form-group">
               <label class="control-label col-lg-3" >Category</label>

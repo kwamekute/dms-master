@@ -11,7 +11,7 @@ $branch_id = $user_info->getuser($username)["branch_id"];
 $branch_name = $user_info->getbch($branch_id)["branch_name"];
 $motto = $user_info->getbch($branch_id)["motto"];
 ?>
-<div class="header-top-area">
+<div class="nk-blue" style="background: #3B8DBC;">
 <div class="container">
 <div class="row">
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">

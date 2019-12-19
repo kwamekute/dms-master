@@ -28,20 +28,18 @@
             <div class="panel with-nav-tabs panel-info">
                 <div class="panel-heading">
                         <ul class="nav nav-tabs">
-                           <!-- <li class="active col-md-3"><a href="#tab1default" data-toggle="tab">Default 1</a></li>
-                            <li class="col-md-3"><a href="#tab2default" data-toggle="tab">Default 2</a></li>
-                            <li class="col-md-3"><a href="#tab3default" data-toggle="tab">Default 3</a></li>-->
+                           
                             <li class="active dropdown col-sm-3">
                                 <a href="#" data-toggle="dropdown">Inventory Maintenance <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#tab1default" data-toggle="tab">View/Search Parts</a></li>
-                                    <li><a href="#tab2default" data-toggle="tab">Add New Part</a></li>
+                                    <li><a href="#parts" data-toggle="tab">View/Search Parts</a></li>
+                                    
                                 </ul>
                             </li>
                             <li class="dropdown col-sm-3">
                                 <a href="#" data-toggle="dropdown">Purchase Enquiry <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#tab3default" data-toggle="tab">View Enquiries</a></li>
+                                    <li><a href="#enquiry" data-toggle="tab">View Enquiries</a></li>
                                     <li><a href="#tab4default" data-toggle="tab">Make New Enquiry</a></li>
                                 </ul>
                             </li>
@@ -64,8 +62,8 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab1default">   <?php include 'viewparts.php'?>  </div>
-                        <div class="tab-pane fade" id="tab2default"><?php include 'addparts.php'?></div>
+                        <div class="tab-pane fade in active" id="parts">   <?php include 'viewparts.php'?>  </div>
+                       <!-- <div class="tab-pane fade" id="tab2default"><?php include 'addparts.php'?></div> -->
                         <div class="tab-pane fade" id="tab3default">Default 3</div>
                         <div class="tab-pane fade" id="tab4default">Default 4</div>
                         <div class="tab-pane fade" id="tab5default">Default 5</div>
