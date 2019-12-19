@@ -3,25 +3,40 @@
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-<li class="active"><a data-toggle="tab" href="#Home"><i class="notika-icon notika-house"></i> Home</a>
+<<<<<<< HEAD
+<li class="active"><a href="index.php"><i class="notika-icon notika-house"></i> Home</a>
+=======
+<li class="active"><a data-toggle="tab" href="inventory.php"><i class="fa fa-camera"></i> Inventory Maintenance</a>
+>>>>>>> 5dfd134e13fbd39a4d20c9784f36711655c74086
 </li>
-<li><a data-toggle="tab" href="#mailbox"><i class="notika-icon notika-mail"></i> History</a>
+<li><a data-toggle="tab" href="#"><i class="notika-icon notika-mail"></i> History</a>
 </li>
-<li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i> Reorder</a>
+<li><a data-toggle="tab" href="#maintenance"><i class="notika-icon notika-settings"></i> Maintenance</a>
 </li>
-<li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-bar-chart"></i> Maintenance</a>
-</li>
-<li><a data-toggle="tab" href="#Tables"><i class="notika-icon notika-windows"></i> Stockin</a>
+<li><a href="stockin.php"><i class="notika-icon notika-file"></i> Stockin</a>
 </li>
 <li><a data-toggle="tab" href="#Forms"><i class="notika-icon notika-form"></i> Reports</a>
 </li>
-<li><a data-toggle="tab" href="#Appviews"><i class="notika-icon notika-app"></i> Charts</a>
+<li><a data-toggle="tab" href="#Appviews"><i class="notika-icon notika-bar-chart"></i> Charts</a>
 </li>
 </ul>
 <div class="tab-content custom-menu-content">
+<<<<<<< HEAD
+
+  <div id="maintenance" class="tab-pane notika-tab-menu-bg animated flipInX">
+    <ul class="notika-main-menu-dropdown">
+      <li><a href="category.php">Category</a></li>
+      <li><a href="customer.php">Customer</a></li>
+      <li><a href="creditors.php">Credit Application</a></li>
+      <li><a href="parts.php">parts</a></li>
+      <li><a href="supplier.php">Supplier</a></li>
+    </ul>
+  </div>
+
+=======
 <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
 <ul class="notika-main-menu-dropdown">
-<li><a href="index.html">Application</a>
+<li><a href=""></a>
 </li>
 </ul>
 </div>
@@ -61,58 +76,24 @@
 </li>
 </ul>
 </div>
+>>>>>>> 5dfd134e13fbd39a4d20c9784f36711655c74086
 <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="form-elements.html">Form Elements</a>
-</li>
-<li><a href="form-components.html">Form Components</a>
-</li>
-<li><a href="form-examples.html">Form Examples</a>
-</li>
-</ul>
+  <ul class="notika-main-menu-dropdown">
+    <li><a href="form-elements.html">Inventory</a></li>
+    <li><a href="form-components.html">Sales</a></li>
+    <li><a href="form-examples.html">Account Receivables</a></li>
+    <li><a href="form-examples.html">Branch Income</a></li>
+    <li><a href="form-examples.html">Purchase Request</a></li>
+  </ul>
 </div>
 <div id="Appviews" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="notification.html">Notifications</a>
-</li>
-<li><a href="alert.html">Alerts</a>
-</li>
-<li><a href="modals.html">Modals</a>
-</li>
-<li><a href="buttons.html">Buttons</a>
-</li>
-<li><a href="tabs.html">Tabs</a>
-</li>
-<li><a href="accordion.html">Accordion</a>
-</li>
-<li><a href="dialog.html">Dialogs</a>
-</li>
-<li><a href="popovers.html">Popovers</a>
-</li>
-<li><a href="tooltips.html">Tooltips</a>
-</li>
-<li><a href="dropdown.html">Dropdowns</a>
-</li>
-</ul>
-</div>
-<div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
-<ul class="notika-main-menu-dropdown">
-<li><a href="contact.html">Contact</a>
-</li>
-<li><a href="invoice.html">Invoice</a>
- </li>
-<li><a href="typography.html">Typography</a>
-</li>
-<li><a href="color.html">Color</a>
-</li>
-<li><a href="login-register.html">Login Register</a>
-</li>
-<li><a href="404.html">404 Page</a>
-</li>
-</ul>
+  <ul class="notika-main-menu-dropdown">
+    <li><a href="notification.html">Charts</a></li>
+  </ul>
 </div>
 </div>
 </div>
 </div>
+
 </div>
 </div>

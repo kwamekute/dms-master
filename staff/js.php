@@ -1,5 +1,4 @@
 <script src="../js/vendor/jquery-1.12.4.min.js"></script>
-
 <script src="../js/bootstrap.min.js"></script>
 
 <script src="../js/wow.min.js" type="260efd8c3afaa9375ab8bbd1-text/javascript"></script>
@@ -48,8 +47,5 @@
 
 <script src="../js/main.js" type="260efd8c3afaa9375ab8bbd1-text/javascript"></script>
 
-<script src="../js/tawk-chat.js" type="260efd8c3afaa9375ab8bbd1-text/javascript"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="260efd8c3afaa9375ab8bbd1-text/javascript"></script>
-
+<!--<script src="../js/tawk-chat.js" type="260efd8c3afaa9375ab8bbd1-text/javascript"></script>-->
 <script src="../js/rocket-loader.min.js" data-cf-settings="260efd8c3afaa9375ab8bbd1-|49" defer=""></script></body>

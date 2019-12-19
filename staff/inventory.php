@@ -1,4 +1,4 @@
-
+<?php include 'title.php';?>
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Dashboard One | Notika - Notika Admin Template</title>
+<title>Inventory | <?php echo TITLE;?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,137 +19,68 @@
 
 <?php include 'topnav.php' ?>
 <?php include 'mobilenav.php' ?>
-<?php include 'mainnav.php' ?>
+<?php include 'inventorynav.php' ?>
 
-<div class="sale-statistic-area">
-  <div class="container">
+<div class="content container">
+    
     <div class="row">
-      <div class="col-lg-9 col-md-5 col-sm-7 col-xs-12">
-        <div class="sale-statistic-inner notika-shadow mg-tb-30">
-<?php
-if (isset($_POST['add'])) {
-// Now call set info
-    $main = preg_replace("#[^0-9]#","",$_POST['main']);
-    $name = preg_replace("#[^0-9a-zA-z-. ]#","",$_POST['fullname']);
-    $role = preg_replace("#[^0-9]#","",$_POST['role']);
-    $password =  md5($_POST['password']);
-    $username = preg_replace("#[^0-9a-zA-z-., ]#","",$_POST['username']);
-    if (!empty($name) && $role !="" && !empty($password) && !empty($username)) {
-    // send data
-    $result = $user_info->adduser($username,$password,$name,$role,$main);
-   if ($result['response']) {
-     ?>
-     <script>toastr.success("successfully added a User");</script>
-     <?php
-   }else{
-     ?>
-     <script>toastr.error("Ooops something happend");</script>
-     <?php
-   }
-  }
-}
-?>
-  <form method="post">
-    <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
-      <div class="form-element-list mg-t-30">
-          <div class="cmp-tb-hd">
-          <h2>Make Enquiry</h2>
-          </div>
+    	<div class="col-sm-12">
+            <div class="panel with-nav-tabs panel-info">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                           <!-- <li class="active col-md-3"><a href="#tab1default" data-toggle="tab">Default 1</a></li>
+                            <li class="col-md-3"><a href="#tab2default" data-toggle="tab">Default 2</a></li>
+                            <li class="col-md-3"><a href="#tab3default" data-toggle="tab">Default 3</a></li>-->
+                            <li class="active dropdown col-sm-3">
+                                <a href="#" data-toggle="dropdown">Inventory Maintenance <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab1default" data-toggle="tab">View/Search Parts</a></li>
+                                    <li><a href="#tab2default" data-toggle="tab">Add New Part</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown col-sm-3">
+                                <a href="#" data-toggle="dropdown">Purchase Enquiry <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab3default" data-toggle="tab">View Enquiries</a></li>
+                                    <li><a href="#tab4default" data-toggle="tab">Make New Enquiry</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown col-sm-3">
+                                <a href="#" data-toggle="dropdown">Purchase Order <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab5default" data-toggle="tab">View Purchase Orders</a></li>
+                                    <li><a href="#tab6default" data-toggle="tab">Make New Purchase order</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown col-sm-3">
+                                <a href="#" data-toggle="dropdown">Receipt Documents <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab7default" data-toggle="tab">View Receipts </a></li>
+                                    <li><a href="#tab8default" data-toggle="tab">Confirm New Receipts</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1default">   <?php include 'viewparts.php'?>  </div>
+                        <div class="tab-pane fade" id="tab2default"><?php include 'addparts.php'?></div>
+                        <div class="tab-pane fade" id="tab3default">Default 3</div>
+                        <div class="tab-pane fade" id="tab4default">Default 4</div>
+                        <div class="tab-pane fade" id="tab5default">Default 5</div>
+                        <div class="tab-pane fade" id="tab6default">Default 6</div>
+                        <div class="tab-pane fade" id="tab6default">Default 7</div>
+                        <div class="tab-pane fade" id="tab6default">Default 8</div>
 
-
-
-          <div class="col-md-7">
-              <div class="form-group ic-cmp-int">
-                <div class="form-ic-cmp">
-                <i class="notika-icon notika-support"></i>
+                    </div>
                 </div>
-                <div class="nk-int-st">
-                  <input type="text" class="form-control" name="username" placeholder="username">
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-7">
-              <div class="form-group ic-cmp-int float-lb floating-lb">
-                <div class="form-ic-cmp">
-                <i class="notika-icon notika-support"></i>
-                </div>
-                <div class="nk-int-st">
-                  <input type="password" class="form-control" name="password" placeholder="password">
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-7">
-              <div class="form-group ic-cmp-int float-lb floating-lb">
-                <div class="form-ic-cmp">
-                <i class="notika-icon notika-support"></i>
-                </div>
-                <div class="nk-int-st">
-                  <input type="text" class="form-control" name="fullname" placeholder="FUll Name">
-                </div>
-              </div>
-          </div>
-          <div class="col-md-7">
-              <div class="form-group ic-cmp-int float-lb floating-lb">
-                <div class="form-ic-cmp">
-                <i class="notika-icon notika-support"></i>
-                </div>
-                <div class="nk-int-st">
-                <select class="form-control" name="role">
-                  <option value=" ">Select Role</option>
-                  <option value="1">Admin</option>
-                  <option value="0">Staff</option>
-                </select>
-                </div>
-              </div>
-          </div>
-          <div class="col-md-7">
-              <div class="form-group ic-cmp-int float-lb floating-lb">
-                <div class="form-ic-cmp">
-                <i class="notika-icon notika-support"></i>
-                </div>
-                <div class="nk-int-st">
-                <select class="form-control" name="main">
-                  <option value="0">Select Main Company</option>
-                  <?php
-                    $response = $user_info ->getallcompanies();
-                    if ($response['response']) {
-
-                      for ($i=0; $i < count($response['data']); $i++) {
-                                $data = $response['data'][$i];
-                                $branch_id = $data['branch_id'];
-                                $branch_name = $data['branch_name'];
-                                ?>
-                                <option value="<?php echo $branch_id ?>"><?php echo $branch_name ?></option>
-                                <?php
-                           }
-                       }
-                  ?>
-
-                </select>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-7">
-              <div class="form-group ic-cmp-int float-lb floating-lb">
-                <div class="form-ic-cmp">
-                <button  type="submit" name="add" class="btn btn-success orange-icon-notika waves-effect">
-                 Add User
-                </button>
-                </div>
-              </div>
-          </div>
-
-       </div>
-   </div>
-</form>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+      
+	</div>
 </div>
+
 
 
 

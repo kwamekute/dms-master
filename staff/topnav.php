@@ -1,8 +1,8 @@
+
 <?php
 ob_start();
 $link = $_SERVER['DOCUMENT_ROOT'];
 include '../e_lib/connect.php';
-
 if(!isset($_COOKIE['_u']) && !isset($_COOKIE['_l'])){
     header('location: ../login/login-register.php');
 }
@@ -11,7 +11,6 @@ $branch_id = $user_info->getuser($username)["branch_id"];
 $branch_name = $user_info->getbch($branch_id)["branch_name"];
 $motto = $user_info->getbch($branch_id)["motto"];
 ?>
-
 <div class="header-top-area">
 <div class="container">
 <div class="row">
@@ -105,6 +104,7 @@ $motto = $user_info->getbch($branch_id)["motto"];
       </div>
   </div>
 </li>
+<input type="text" id="branch" value="<?php echo $branch_id ?>" style="display:none; color:#fff" />
 </ul>
 </div>
 </div>
